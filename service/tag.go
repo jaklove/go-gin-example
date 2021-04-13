@@ -19,46 +19,6 @@ func (t *Tag) ExistByName() (bool, error) {
 	return models.ExistTagByName(t.Name)
 }
 
-//func (t *Tag) ExistByID() (bool, error) {
-//	return models.ExistTagByID(t.ID)
-//}
-//
-//
-//func (t *Tag) Add() error {
-//	return models.AddTag(t.Name, t.State, t.CreatedBy)
-//}
-//
-//func (t *Tag) GetAll() ([]models.Tag, error) {
-//	var (
-//		tags, cacheTags []models.Tag
-//	)
-//
-//	cache := cache_service.Tag{
-//		State: t.State,
-//
-//		PageNum:  t.PageNum,
-//		PageSize: t.PageSize,
-//	}
-//	key := cache.GetTagsKey()
-//	if gredis.Exists(key) {
-//		data, err := gredis.Get(key)
-//		if err != nil {
-//			logging.Info(err)
-//		} else {
-//			json.Unmarshal(data, &cacheTags)
-//			return cacheTags, nil
-//		}
-//	}
-//
-//	tags, err := models.GetTags(t.PageNum, t.PageSize, t.getMaps())
-//	if err != nil {
-//		return nil, err
-//	}
-//
-//	gredis.Set(key, tags, 3600)
-//	return tags, nil
-//}
-
 //func (t *Tag) Export() (string, error) {
 //	tags, err := t.GetAll()
 //	if err != nil {
@@ -112,4 +72,35 @@ func (t *Tag) ExistByName() (bool, error) {
 //	}
 //
 //	return filename, nil
+//}
+//
+//func (t *Tag) GetAll() ([]models.Tag, error) {
+//	var (
+//		tags, cacheTags []models.Tag
+//	)
+//
+//	cache := cache_service.Tag{
+//		State: t.State,
+//
+//		PageNum:  t.PageNum,
+//		PageSize: t.PageSize,
+//	}
+//	key := cache.GetTagsKey()
+//	if gredis.Exists(key) {
+//		data, err := gredis.Get(key)
+//		if err != nil {
+//			logging.Info(err)
+//		} else {
+//			json.Unmarshal(data, &cacheTags)
+//			return cacheTags, nil
+//		}
+//	}
+//
+//	tags, err := models.GetTags(t.PageNum, t.PageSize, t.getMaps())
+//	if err != nil {
+//		return nil, err
+//	}
+//
+//	gredis.Set(key, tags, 3600)
+//	return tags, nil
 //}

@@ -29,16 +29,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pkg/app" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\go-gin-example\models" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\go-gin-example\pkg" />
       <recent name="C:\go-gin-example\middleware\jwt" />
       <recent name="C:\go-gin-example\routers\api\v1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\go-gin-example\pkg\app" />
+      <recent name="C:\go-gin-example\service\auth_service" />
+      <recent name="C:\go-gin-example\service\article_service" />
+      <recent name="C:\go-gin-example\models" />
     </key>
   </component>
   <component name="RunManager">
@@ -93,5 +96,16 @@
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="2607" y="243" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/1920.0.2048.1112@1920.0.2048.1112" timestamp="1617858873054" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/service/tag_service/tag.go</url>
+          <line>132</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
